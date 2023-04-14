@@ -15,6 +15,8 @@ function Book(title, author, pages, isRead) {
   }
 
 //DOM Objects
+const booksGrid = document.querySelector('#booksGrid')
+const btnCard = document.querySelector('#btnCard')
 const form = document.querySelector('#addBookForm')
 const titleInput = document.querySelector('#title')
 const authorInput = document.querySelector('#author')
@@ -23,17 +25,43 @@ const isRead = document.querySelector('#isRead')
 
 
 
-function getInputValue() {
+function getInputValue(event) {
+  event.preventDefault(); 
+  const titleValue = titleInput.value;
+   const authorValue = authorInput.value;
+    const pagesValue = pagesInput.value;
+    // const isReadValue = isReadValue.checked;
   
-  // Get the value of the input element
-  let titleValue = titleInput.value;
-   let authorValue = authorInput.value;
-    let pagesValue = pagesInput.value;
-  
-  // Display the value in an alert box
-  alert("The value is: " + titleValue + authorValue + pagesValue);
+    if(titleValue != ' '){
+      const title = document.createElement('span')
+      const author = document.createElement('span')
+      const pages = document.createElement('span')
+      // const read = document.createElement("span")
+      title.textContent = titleValue
+      author.textContent = authorValue
+      pages.textContent = pagesValue
+      // read.textContent = isReadValue
+      booksGrid.appendChild(title)
+      booksGrid.appendChild(author)
+      booksGrid.appendChild(pages)
+      // booksGrid.appendChild(isReadValue)
+    }else{
+      alert(" Error tente novamente")
+    }
+
    
 }
+// const Library = ()=> {
+// const title = document.createElement('span')
+// const author = document.createElement('span')
+// const pages = document.createElement('span')
+// title = titleInput.value
+// author = authorInput.value
+// pages = pagesInput.value
+// booksGrid.appendChild(title)
+// booksGrid.appendChild(author)
+// booksGrid.appendChild(pages)
+// }
 // function addBookToLibrary() {
 //   let title = titleInput.value;
 //   let author = authorInput.value;
@@ -43,7 +71,4 @@ function getInputValue() {
 //   }
 
 
-
-  const booksGrid = document.querySelector('#booksGrid')
-  const btnCard = document.querySelector('#btnSubmit')
-  btnCard.addEventListener('click', getValue);
+  btnCard.addEventListener('click', getInputValue);
