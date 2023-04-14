@@ -5,16 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Library</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DynaPuff&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+
     <script src="./script.js" defer></script>
   </head>
    <header>
     <h1>My library</h1>
    </header>
 
-   <div class="modal" id="addBookModal">
-          <h3>Add new book</h3>
-          <div class="books-grid" id="booksGrid"></div>
-      <form class="add-book-form" id="addBookForm">
+   <div class="modal">
+      <form class="form" id="addBookForm">
+        <span>Add a book</span>
       <input
         class="input"
         type="text"
@@ -46,7 +51,8 @@
       </div>
       <button class="btnSubmit" type="submit" id="btnCard">Add book</button>
     </form>
-  
   </div>
+
+  <div class="books-grid" id="booksGrid"></div>
   </body>
 </html>
