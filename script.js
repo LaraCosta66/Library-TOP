@@ -22,43 +22,34 @@ const authorInput = document.querySelector("#author");
 const pagesInput = document.querySelector("#pages");
 const isRead = document.querySelector("#isRead");
 
+
 function addBookToLibrary(event) {
   event.preventDefault();
   const titleValue = titleInput.value;
   const authorValue = authorInput.value;
   const pagesValue = pagesInput.value;
+  const isReadCheck =isRead.checked;
+  const resultValues = (titleValue, authorValue, pagesValue);
+  const newBook = new Book(titleValue, authorValue, pagesValue, isReadCheck);
+  myLibrary.push(newBook);
 
-    const newBook = new Book(titleValue, authorValue, pagesValue);
-    myLibrary.push(newBook);
-    if(newBook != '') {
-      const newDiv = document.createElement('div');
-      newDiv.innerText = `Titulo: ${newBook.title}, Author: ${newBook.author}, Number of Pages: ${newBook.pages}`;
-      booksGrid.appendChild(newDiv);
-      return newBook;
-    }else{
-      alert('adicione valores')
-    }
-  
+  if (resultValues) {
+    const title = document.createElement("span");
+    const author = document.createElement("span");
+    const pages = document.createElement("span");
+const read =document.createElement('span');
+    title.innerText = `Titulo: ${newBook.title} `;
+    author.innerText = `Author: ${newBook.author}`;
+    pages.innerText = `Number of Pages: ${newBook.pages}`;
+    read.innerText = ` have u read it: ${newBook.isRead}`
+    booksGrid.appendChild(title);
+    booksGrid.appendChild(author);
+    booksGrid.appendChild(pages);
+    booksGrid.appendChild(read);
+    return newBook;
+  } else {
+    alert("Adicione todas as informações do livro");
+  }
 }
-// function addBookToLibrary(event) {
-//   event.preventDefault();
-//   const titleValue = titleInput.value;
-//   const authorValue = authorInput.value;
-//   const pagesValue = pagesInput.value;
-//   const newBook = new Book(titleValue, authorValue, pagesValue);
-//   myLibrary.push(newBook);
- 
-// }
-
-// const title = document.createElement('span')
-// const author = document.createElement('span')
-// const pages = document.createElement('span')
-
-// library.textContent = my
-// author.textContent = authorValue
-// pages.textContent = pagesValue
-
-// booksGrid.appendChild(title)
-// booksGrid.appendChild(author)
 
 btnCard.addEventListener("click", addBookToLibrary);
