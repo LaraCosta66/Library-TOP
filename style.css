@@ -8,10 +8,14 @@ header {
   justify-content: center;
   align-items: center;
   padding: 30px;
+  background-image: url("./assets/library-image.jpg");
+  background-repeat: repeat;
+
   font-family: "DynaPuff", cursive;
 }
 body {
   background-color: gray;
+
 }
 
 .modal {
@@ -26,13 +30,16 @@ body {
   width: 200px;
   height: 270px;
   margin-top: 20px;
-  padding: 25px;
+  padding: 20px;
   gap: 15px;
-
-  background: #3405a3;
+  background-color:  white;
   border-radius: 15px;
-  box-shadow: 1px 5px 60px 0px #100a886b;
+  box-shadow: 1px 5px 60px 0px #020617;
   font-family: "Ubuntu", sans-serif;
+}
+.form span{
+  font-weight: 700;
+  
 }
 .form button {
   padding: 8px 25px;
@@ -40,12 +47,38 @@ body {
   margin: auto;
   border-radius: 8px;
   border: none;
-  margin-top: 30px;
-  background: #6b64f3;
+
+  background: #1e40af;
   color: white;
   font-weight: 700;
 }
-
 .form button:hover {
   background: #534bf3;
 }
+
+.input {
+  width: 150px;
+  height: 100px;
+  padding: 0 16px;
+  background: transparent;
+
+  border-radius: 4px;
+  border: 1px solid #DB1A00;
+  color: 000000;
+  animation: shake_541 0.14s 3;
+}
+.input:valid {
+  border-color: #45feaf;
+  animation: none;
+}
+.is-read{
+  display: flex;
+justify-content: center;
+gap: 2px;
+}
+.checkbox{
+  width: 20px;
+  height: 20px;
+}
+
+
