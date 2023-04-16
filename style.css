@@ -7,13 +7,12 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px;
-  background-image: url("./assets/library-image.jpg");
-  background-repeat: repeat;
+  padding: 20px;
 
   font-family: "DynaPuff", cursive;
 }
 body {
+  width: 100vw;
   background-color: gray;
 
 }
@@ -29,7 +28,7 @@ body {
   justify-content: center;
   width: 200px;
   height: 270px;
-  margin-top: 20px;
+  margin-top: 10px;
   padding: 20px;
   gap: 15px;
   background-color:  white;
@@ -80,5 +79,24 @@ gap: 2px;
   width: 20px;
   height: 20px;
 }
-
+.books-grid{
+  display: inline-grid;
+  grid-template: auto auto/350px 350px 350px 350px ;
+  gap: 20px;
+  padding: 20px;
+}
+.book-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 200px;
+  padding: 15px;
+  gap: 10px;
+  font-size: 18px;
+  border: none;
+  background: #f3f4f6;
+  border-radius: 20px;
+  font-family: "Ubuntu", sans-serif;
+}
 
