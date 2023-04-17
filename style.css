@@ -100,3 +100,18 @@ gap: 2px;
   font-family: "Ubuntu", sans-serif;
 }
 
+.removeBtn{
+  width: auto;
+  height: 50px;
+  background-color: #EF0F00;
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+}
+.removeBtn:hover{
+  background-color: #BD0D00;
+  cursor: pointer;
+}

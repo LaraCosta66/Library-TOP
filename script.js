@@ -30,11 +30,10 @@ function addBookToLibrary(event) {
   const authorValue = authorInput.value;
   const pagesValue = pagesInput.value;
   const isReadCheck = isRead.checked;
-  const resultValues = (titleValue, authorValue, pagesValue);
   const newBook = new Book(titleValue, authorValue, pagesValue, isReadCheck);
   myLibrary.push(newBook);
 
-  if (resultValues) {
+  if (titleValue != '') {
     const title = document.createElement("div");
     title.classList.add("title");
     const author = document.createElement("div");
@@ -46,10 +45,12 @@ function addBookToLibrary(event) {
     const bookContainer = document.createElement("div");
   bookContainer.classList.add("book-container");
   const removeBtn = document.createElement("button");
+  removeBtn.classList.add('removeBtn');
+  
     title.innerHTML = `<strong>Titulo:</strong> ${newBook.title} `;
     author.innerHTML = `<strong>Author:</strong> ${newBook.author}`;
     pages.innerHTML = `<strong>Pages:</strong> ${newBook.pages}`;
-    read.innerHTML = `<strong> have u read it:</strong> ${newBook.isRead}`;
+    read.innerHTML = `<strong> have you read it:</strong> ${newBook.isRead}`;
     removeBtn.innerText = 'Remover livro'
     bookContainer.appendChild(title);
     bookContainer.appendChild(author);
