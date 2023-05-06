@@ -21,6 +21,7 @@ const titleInput = document.querySelector("#title");
 const authorInput = document.querySelector("#author");
 const pagesInput = document.querySelector("#pages");
 const isRead = document.querySelector("#isRead");
+
 btnCard.addEventListener("click", addBookToLibrary);
 
 function addBookToLibrary(event) {
@@ -50,13 +51,15 @@ function createBookList() {
     <div class="author"><strong>Author:</strong> ${authorValue}</div>
     <div class="pages"><strong>Pages:</strong> ${pagesValue}</div>
     <div class="read"><strong> have you read it:</strong> ${isReadCheck}</div>
-    <button onclick=removeBook() class='removeBtn'>Remove book</button>
+    <button class='removeBtn'>Remove book</button>
   `;
-
+  const removeBtn = bookContainer.querySelector(".removeBtn");
+  removeBtn.addEventListener("click", removeBook);
   bookShelf.appendChild(bookContainer);
 }
 
 //Function remove book
-function removeBook() {
-  console.log('removeu')
+function removeBook(e) {
+  const element = e.currentTarget.parentElement;
+  element.remove();
 }
