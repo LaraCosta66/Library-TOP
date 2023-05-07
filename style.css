@@ -14,7 +14,6 @@ header {
 body {
   width: 100vw;
   background-color: gray;
-
 }
 
 .modal {
@@ -31,14 +30,13 @@ body {
   margin-top: 10px;
   padding: 20px;
   gap: 15px;
-  background-color:  white;
+  background-color: white;
   border-radius: 15px;
   box-shadow: 1px 5px 60px 0px #020617;
   font-family: "Ubuntu", sans-serif;
 }
-.form span{
+.form span {
   font-weight: 700;
-  
 }
 .form button {
   padding: 8px 25px;
@@ -62,7 +60,7 @@ body {
   background: transparent;
 
   border-radius: 4px;
-  border: 1px solid #DB1A00;
+  border: 1px solid #db1a00;
   color: 000000;
   animation: shake_541 0.14s 3;
 }
@@ -70,22 +68,22 @@ body {
   border-color: #45feaf;
   animation: none;
 }
-.is-read{
+.is-read {
   display: flex;
-justify-content: center;
-gap: 2px;
+  justify-content: center;
+  gap: 2px;
 }
-.checkbox{
+.checkbox {
   width: 20px;
   height: 20px;
 }
-.books-grid{
+.books-grid {
   display: inline-grid;
-  grid-template: auto auto/350px 350px 350px 350px ;
+  grid-template: auto auto/350px 350px 350px 350px;
   gap: 20px;
   padding: 20px;
 }
-.book-container{
+.book-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -100,10 +98,10 @@ gap: 2px;
   font-family: "Ubuntu", sans-serif;
 }
 
-.removeBtn{
+.removeBtn {
   width: auto;
   height: 50px;
-  background-color: #EF0F00;
+  background-color: #ef0f00;
   border-radius: 10px;
   padding: 10px;
   border: none;
@@ -111,7 +109,7 @@ gap: 2px;
   font-weight: 700;
   font-size: 16px;
 }
-.removeBtn:hover{
-  background-color: #BD0D00;
+.removeBtn:hover {
+  background-color: #bd0d00;
   cursor: pointer;
 }
