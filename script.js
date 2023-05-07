@@ -35,7 +35,7 @@ function addBookToLibrary(event) {
   if (titleValue) {
     createBookList();
   } else {
-    console.log("not all information");
+   alert("All informations are necessary");
   }
 }
 //Function create book
@@ -63,3 +63,17 @@ function removeBook(e) {
   const element = e.currentTarget.parentElement;
   element.remove();
 }
+
+// function readCheck
+// function readCheck(){
+//   const isReadCheck = isRead.checked;
+//   const element = document.createElement('div')
+// if(isReadCheck){
+//   element.innerHTML='<strong>Lido</strong>';
+//   bookShelf.firstElementChild.appendChild(element)
+// }else{
+//   element.innerHTML='<strong>Ler</strong>';
+//   bookShelf.firstElementChild.appendChild(element)
+// }
+//   console.log(bookShelf.firstElementChild)
+// }
